@@ -10,7 +10,7 @@ import localforage from 'localforage';
 export type AppDispatch = typeof store.dispatch
 
 const persistConfig = {
-    key: 'root',
+    key: 'rivus_root',
     //storage,
     storage: localforage,
     // globalModels are always fetched fresh from the server on each app start,
