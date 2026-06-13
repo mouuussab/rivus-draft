@@ -605,7 +605,7 @@ export const DataFormulatorFC = ({ }) => {
         }}>
         <Box sx={{margin:'auto', pb: '5%', display: "flex", flexDirection: "column", textAlign: "center", maxWidth: 1024, width: '100%', px: 2, boxSizing: 'border-box' }}>
             <Box sx={{display: 'flex', mx: 'auto'}}>
-                <Typography fontSize={84} sx={{ml: 2, letterSpacing: '0.05em'}}>{toolName}</Typography> 
+                <Box component="img" sx={{  width: 250, margin: "auto" }} alt="Rivus logo" src={dfLogo} fetchPriority="high" />
             </Box>
             <Typography sx={{ 
                 fontSize: 24, color: theme.palette.text.secondary, 
@@ -726,7 +726,6 @@ export const DataFormulatorFC = ({ }) => {
                         zIndex: 1000,
                     }}>
                         <Box sx={{margin:'auto', pb: '5%', display: "flex", flexDirection: "column", textAlign: "center"}}>
-                            <Box component="img" sx={{  width: 196, margin: "auto" }} alt="Rivus logo" src={dfLogo} fetchPriority="high" />
                             <Typography variant="h3" sx={{marginTop: "20px", fontWeight: 200, letterSpacing: '0.05em'}}>
                                 {toolName}
                             </Typography>

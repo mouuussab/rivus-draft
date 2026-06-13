@@ -84,7 +84,7 @@ import { MessageSnackbar } from '../views/MessageSnackbar';
 import { ChartRenderService } from '../views/ChartRenderService';
 import { DictTable } from '../components/ComponentType';
 import { AppDispatch } from './store';
-const dfLogo = '/rivus-logo-full.svg';
+const dfLogo = '/rivus-icon-1024px.svg';
 import { AnvilLoader } from '../components/AnvilLoader';
 import { ModelSelectionButton } from '../views/ModelSelectionDialog';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -813,16 +813,7 @@ const AppShell: FC = () => {
                                 {toolName}
                             </Typography>
                         </Button>
-                        <Box
-                            sx={{
-                                ml: 2,
-                                height: '28px',
-                                my: 'auto',
-                                display: 'flex',
-                            }}
-                        >
-                            <TopNavButton to="/about" label={t('appBar.about')} selected={isAboutPage} />
-                        </Box>
+
                         {/* Centered workspace name — acts as session indicator/switcher */}
                         {activeWorkspace && isAppPage && (
                             <Box sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center' }}>

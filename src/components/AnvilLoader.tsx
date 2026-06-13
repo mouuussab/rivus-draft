@@ -70,27 +70,5 @@ function BinaryGrid() {
 }
 
 export function AnvilLoader() {
-    return (
-        <Box sx={{
-            display: 'flex', flexDirection: 'column', alignItems: 'center',
-            justifyContent: 'center', height: '100vh', gap: 3,
-            userSelect: 'none',
-        }}>
-            <BinaryGrid />
-            <Typography
-                variant="body2"
-                sx={{
-                    color: 'text.secondary',
-                    fontFamily: '"Courier New", monospace',
-                    letterSpacing: 3,
-                    fontSize: '0.75rem',
-                    fontWeight: 400,
-                    animation: `${pulse} 2.5s ease-in-out infinite`,
-                    textTransform: 'uppercase',
-                }}
-            >
-                loading data formulator...
-            </Typography>
-        </Box>
-    );
+    return <></>;
 }
