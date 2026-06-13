@@ -59,7 +59,7 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 # Stores SSO tokens + service tokens without hitting the 4 KB cookie limit.
 _data_home = os.environ.get(
     'DATA_FORMULATOR_HOME',
-    str(Path.home() / '.data_formulator'),
+    str(Path.home() / '.rivus'),
 )
 _session_dir = os.path.join(_data_home, 'sessions')
 os.makedirs(_session_dir, exist_ok=True)
@@ -389,7 +389,7 @@ def parse_args() -> argparse.Namespace:
         default=int(os.environ.get('MAX_DISPLAY_ROWS', '10000')),
         help="Maximum number of rows to send to the frontend for display (default: 10000)")
     parser.add_argument("--data-dir", type=str, default=None,
-        help="Data Formulator home directory for workspaces and sessions (default: ~/.data_formulator)")
+        help="Data Formulator home directory for workspaces and sessions (default: ~/.rivus)")
     parser.add_argument("--dev", action='store_true', default=False,
         help="Launch the app in development mode (prevents the app from opening the browser automatically)")
     parser.add_argument("--workspace-backend", type=str,

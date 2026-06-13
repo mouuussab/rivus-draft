@@ -58,7 +58,7 @@ def get_data_formulator_home() -> Path:
     Resolution order:
     1. Flask app.config['CLI_ARGS']['data_dir'] (set via --data-dir CLI flag)
     2. DATA_FORMULATOR_HOME environment variable
-    3. Default: ~/.data_formulator
+    3. Default: ~/.rivus
     """
     # Try Flask app config first (set by --data-dir CLI arg)
     try:
@@ -73,7 +73,7 @@ def get_data_formulator_home() -> Path:
     if env_home:
         return Path(env_home)
 
-    return Path.home() / ".data_formulator"
+    return Path.home() / ".rivus"
 
 
 def get_default_workspace_root() -> Path:

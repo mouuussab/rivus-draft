@@ -14,7 +14,7 @@ Two loader sources:
       team-shared dirs, read-only mounts, dev iteration).
    2. ``DATA_FORMULATOR_HOME/plugins`` — the default location,
       consistent with every other DF artifact.
-   3. ``~/.data_formulator/plugins/`` — final fallback when
+   3. ``~/.rivus/plugins/`` — final fallback when
       ``DATA_FORMULATOR_HOME`` is unset.
 
    Any ``ExternalDataLoader`` subclass found in such a file is
@@ -106,13 +106,13 @@ def _resolve_plugin_dir() -> str:
 
     Order: ``DF_PLUGIN_DIR`` (explicit override) >
     ``DATA_FORMULATOR_HOME/plugins`` (default) >
-    ``~/.data_formulator/plugins`` (fallback).
+    ``~/.rivus/plugins`` (fallback).
     """
     explicit = os.environ.get("DF_PLUGIN_DIR")
     if explicit:
         return explicit
     df_home = os.environ.get("DATA_FORMULATOR_HOME")
-    base = Path(df_home) if df_home else Path.home() / ".data_formulator"
+    base = Path(df_home) if df_home else Path.home() / ".rivus"
     return str(base / "plugins")
 
 

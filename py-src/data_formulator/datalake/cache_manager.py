@@ -62,7 +62,7 @@ class GlobalCacheManager:
     Usage::
 
         mgr = GlobalCacheManager.get_instance(
-            cache_root=Path("~/.data_formulator/cache"),
+            cache_root=Path("~/.rivus/cache"),
             max_global_bytes=10 * 1024**3,   # 10 GB
         )
 
@@ -96,7 +96,7 @@ class GlobalCacheManager:
 
         Args:
             cache_root: Root of the local cache tree.  Defaults to
-                ``~/.data_formulator/cache``.
+                ``~/.rivus/cache``.
             max_global_bytes: Global ceiling in bytes (default 10 GB).
             scan_interval: Min seconds between full filesystem scans
                 (default 10).

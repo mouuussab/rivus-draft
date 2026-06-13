@@ -670,30 +670,7 @@ ${styles}
                                 }}
                             />
                             
-                            {/* Attribution */}
-                            <Typography sx={{ 
-                                px: 3, pb: 2,
-                                textAlign: 'center',
-                                fontSize: '0.7rem',
-                                color: 'text.disabled',
-                            }}>
-                                {t('report.createdWithAI')}{' '}
-                                <Link 
-                                    href="https://github.com/microsoft/data-formulator" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    sx={{ 
-                                        color: 'text.disabled',
-                                        textDecoration: 'none',
-                                        '&:hover': {
-                                            textDecoration: 'underline'
-                                        }
-                                    }}
-                                >
-                                    https://github.com/microsoft/data-formulator
-                                </Link>
-                            </Typography>
-                        </Box>
+                            {/* Attribution removed */}                        </Box>
                     </Box>
                 </Box>
             </Box>
